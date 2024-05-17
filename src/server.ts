@@ -100,8 +100,9 @@ async function readModbusRegisters(config: Config) {
 }
 
 const config: Config = {
-  host: '140.115.65.193',
-  port: 502,
+  // 填入host ip 和 port
+  host: 'XXX.XXX.XXX.XXX',
+  port: XX,
   method: 'modbus',
   registers: [
     {
