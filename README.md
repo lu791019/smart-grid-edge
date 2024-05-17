@@ -13,6 +13,7 @@ server.ts: 是Web服務器的設定和處理程序
 
 ```
 npm install
+npm run format
 npm run dev
 ```
 
