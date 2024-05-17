@@ -1,0 +1,11 @@
+# 忽略 node_modules 目录
+node_modules
+
+# 忽略生成的构建目录
+dist
+
+# 忽略特定文件
+src/someFileToIgnore.ts
+
+# 忽略特定类型的文件
+*.min.js
