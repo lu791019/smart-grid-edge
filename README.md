@@ -7,5 +7,5 @@ npm run dev
 ```
 open http://localhost:3000
 
-GET http://localhost:3000/modbus
+GET http://localhost:3000/api/modbus
 ```
