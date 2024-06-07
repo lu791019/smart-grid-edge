@@ -13,7 +13,9 @@
       "@/*": ["./src/*"]
     },
     "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
+    "jsxImportSource": "hono/jsx",
+    "experimentalDecorators": true, // 新增
+    "emitDecoratorMetadata": true // 新增
   },
   "exclude": ["migrations/*", "src/generate/*", "tests/", "node_modules"]
 }

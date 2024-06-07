@@ -15,8 +15,17 @@ dependencies:
     specifier: ^0.30.10
     version: 0.30.10
   hono:
-    specifier: ^4.3.6
-    version: 4.3.6
+    specifier: ^4.3.7
+    version: 4.3.7
+  mathjs:
+    specifier: ^12.4.2
+    version: 12.4.2
+  modbus-serial:
+    specifier: ^8.0.16
+    version: 8.0.16
+  net-snmp:
+    specifier: ^3.11.2
+    version: 3.11.2
   node-cron:
     specifier: ^3.0.3
     version: 3.0.3
@@ -42,6 +51,16 @@ devDependencies:
     version: 4.9.5
 
 packages:
+  /@babel/runtime@7.24.5:
+    resolution:
+      {
+        integrity: sha512-Nms86NXrsaeU9vbBJKni6gXiEXZ4CVpYVzEjDH9Sb8vmZ3UljyA1GSOJl/6LGPO8EHLuSF9H+IxNXHPX8QHJ4g==,
+      }
+    engines: { node: '>=6.9.0' }
+    dependencies:
+      regenerator-runtime: 0.14.1
+    dev: false
+
   /@cspotcode/source-map-support@0.8.1:
     resolution:
       {
@@ -921,6 +940,157 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
+  /@serialport/binding-mock@10.2.2:
+    resolution:
+      {
+        integrity: sha512-HAFzGhk9OuFMpuor7aT5G1ChPgn5qSsklTFOTUX72Rl6p0xwcSVsRtG/xaGp6bxpN7fI9D/S8THLBWbBgS6ldw==,
+      }
+    engines: { node: '>=12.0.0' }
+    dependencies:
+      '@serialport/bindings-interface': 1.2.2
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@serialport/bindings-cpp@12.0.1:
+    resolution:
+      {
+        integrity: sha512-r2XOwY2dDvbW7dKqSPIk2gzsr6M6Qpe9+/Ngs94fNaNlcTRCV02PfaoDmRgcubpNVVcLATlxSxPTIDw12dbKOg==,
+      }
+    engines: { node: '>=16.0.0' }
+    requiresBuild: true
+    dependencies:
+      '@serialport/bindings-interface': 1.2.2
+      '@serialport/parser-readline': 11.0.0
+      debug: 4.3.4
+      node-addon-api: 7.0.0
+      node-gyp-build: 4.6.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@serialport/bindings-interface@1.2.2:
+    resolution:
+      {
+        integrity: sha512-CJaUd5bLvtM9c5dmO9rPBHPXTa9R2UwpkJ0wdh9JCYcbrPWsKz+ErvR0hBLeo7NPeiFdjFO4sonRljiw4d2XiA==,
+      }
+    engines: { node: ^12.22 || ^14.13 || >=16 }
+    dev: false
+
+  /@serialport/parser-byte-length@12.0.0:
+    resolution:
+      {
+        integrity: sha512-0ei0txFAj+s6FTiCJFBJ1T2hpKkX8Md0Pu6dqMrYoirjPskDLJRgZGLqoy3/lnU1bkvHpnJO+9oJ3PB9v8rNlg==,
+      }
+    engines: { node: '>=12.0.0' }
+    dev: false
+
+  /@serialport/parser-cctalk@12.0.0:
+    resolution:
+      {
+        integrity: sha512-0PfLzO9t2X5ufKuBO34DQKLXrCCqS9xz2D0pfuaLNeTkyGUBv426zxoMf3rsMRodDOZNbFblu3Ae84MOQXjnZw==,
+      }
+    engines: { node: '>=12.0.0' }
+    dev: false
+
+  /@serialport/parser-delimiter@11.0.0:
+    resolution:
+      {
+        integrity: sha512-aZLJhlRTjSmEwllLG7S4J8s8ctRAS0cbvCpO87smLvl3e4BgzbVgF6Z6zaJd3Aji2uSiYgfedCdNc4L6W+1E2g==,
+      }
+    engines: { node: '>=12.0.0' }
+    dev: false
+
+  /@serialport/parser-delimiter@12.0.0:
+    resolution:
+      {
+        integrity: sha512-gu26tVt5lQoybhorLTPsH2j2LnX3AOP2x/34+DUSTNaUTzu2fBXw+isVjQJpUBFWu6aeQRZw5bJol5X9Gxjblw==,
+      }
+    engines: { node: '>=12.0.0' }
+    dev: false
+
+  /@serialport/parser-inter-byte-timeout@12.0.0:
+    resolution:
+      {
+        integrity: sha512-GnCh8K0NAESfhCuXAt+FfBRz1Cf9CzIgXfp7SdMgXwrtuUnCC/yuRTUFWRvuzhYKoAo1TL0hhUo77SFHUH1T/w==,
+      }
+    engines: { node: '>=12.0.0' }
+    dev: false
+
+  /@serialport/parser-packet-length@12.0.0:
+    resolution:
+      {
+        integrity: sha512-p1hiCRqvGHHLCN/8ZiPUY/G0zrxd7gtZs251n+cfNTn+87rwcdUeu9Dps3Aadx30/sOGGFL6brIRGK4l/t7MuQ==,
+      }
+    engines: { node: '>=8.6.0' }
+    dev: false
+
+  /@serialport/parser-readline@11.0.0:
+    resolution:
+      {
+        integrity: sha512-rRAivhRkT3YO28WjmmG4FQX6L+KMb5/ikhyylRfzWPw0nSXy97+u07peS9CbHqaNvJkMhH1locp2H36aGMOEIA==,
+      }
+    engines: { node: '>=12.0.0' }
+    dependencies:
+      '@serialport/parser-delimiter': 11.0.0
+    dev: false
+
+  /@serialport/parser-readline@12.0.0:
+    resolution:
+      {
+        integrity: sha512-O7cywCWC8PiOMvo/gglEBfAkLjp/SENEML46BXDykfKP5mTPM46XMaX1L0waWU6DXJpBgjaL7+yX6VriVPbN4w==,
+      }
+    engines: { node: '>=12.0.0' }
+    dependencies:
+      '@serialport/parser-delimiter': 12.0.0
+    dev: false
+
+  /@serialport/parser-ready@12.0.0:
+    resolution:
+      {
+        integrity: sha512-ygDwj3O4SDpZlbrRUraoXIoIqb8sM7aMKryGjYTIF0JRnKeB1ys8+wIp0RFMdFbO62YriUDextHB5Um5cKFSWg==,
+      }
+    engines: { node: '>=12.0.0' }
+    dev: false
+
+  /@serialport/parser-regex@12.0.0:
+    resolution:
+      {
+        integrity: sha512-dCAVh4P/pZrLcPv9NJ2mvPRBg64L5jXuiRxIlyxxdZGH4WubwXVXY/kBTihQmiAMPxbT3yshSX8f2+feqWsxqA==,
+      }
+    engines: { node: '>=12.0.0' }
+    dev: false
+
+  /@serialport/parser-slip-encoder@12.0.0:
+    resolution:
+      {
+        integrity: sha512-0APxDGR9YvJXTRfY+uRGhzOhTpU5akSH183RUcwzN7QXh8/1jwFsFLCu0grmAUfi+fItCkR+Xr1TcNJLR13VNA==,
+      }
+    engines: { node: '>=12.0.0' }
+    dev: false
+
+  /@serialport/parser-spacepacket@12.0.0:
+    resolution:
+      {
+        integrity: sha512-dozONxhPC/78pntuxpz/NOtVps8qIc/UZzdc/LuPvVsqCoJXiRxOg6ZtCP/W58iibJDKPZPAWPGYeZt9DJxI+Q==,
+      }
+    engines: { node: '>=12.0.0' }
+    dev: false
+
+  /@serialport/stream@12.0.0:
+    resolution:
+      {
+        integrity: sha512-9On64rhzuqKdOQyiYLYv2lQOh3TZU/D3+IWCR5gk0alPel2nwpp4YwDEGiUBfrQZEdQ6xww0PWkzqth4wqwX3Q==,
+      }
+    engines: { node: '>=12.0.0' }
+    dependencies:
+      '@serialport/bindings-interface': 1.2.2
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /@tsconfig/node10@1.0.11:
     resolution:
       {
@@ -989,6 +1159,13 @@ packages:
       }
     dev: true
 
+  /asn1-ber@1.2.2:
+    resolution:
+      {
+        integrity: sha512-CbNem/7hxrjSiOAOOTX4iZxu+0m3jiLqlsERQwwPM1IDR/22M8IPpA1VVndCLw5KtjRYyRODbvAEIfuTogNDng==,
+      }
+    dev: false
+
   /balanced-match@1.0.2:
     resolution:
       {
@@ -1034,6 +1211,13 @@ packages:
     engines: { node: ^12.20.0 || >=14 }
     dev: true
 
+  /complex.js@2.1.1:
+    resolution:
+      {
+        integrity: sha512-8njCHOTtFFLtegk6zQo0kkVX1rngygb/KQI6z1qZxlFI3scluC+LVTCFbrkWjBv4vvLlbQ9t88IPMC6k95VTTg==,
+      }
+    dev: false
+
   /create-require@1.1.1:
     resolution:
       {
@@ -1065,7 +1249,13 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.2
-    dev: true
+
+  /decimal.js@10.4.3:
+    resolution:
+      {
+        integrity: sha512-VBBaLc1MgL5XpzgIP7ny5Z6Nx3UrRkIViUkPUdtl9aya5amy3De1gsUUSB1g3+3sExYNjCAsAznmukyxCb1GRA==,
+      }
+    dev: false
 
   /diff@4.0.2:
     resolution:
@@ -1369,6 +1559,13 @@ packages:
       '@esbuild/win32-x64': 0.20.2
     dev: true
 
+  /escape-latex@1.2.0:
+    resolution:
+      {
+        integrity: sha512-nV5aVWW1K0wEiUIEdZ4erkGGH8mDxGyxSeqPzRNtWP7ataw+/olFObw7hujFWlVjNsaDFw5VZ5NzVSIqRgfTiw==,
+      }
+    dev: false
+
   /esniff@2.0.1:
     resolution:
       {
@@ -1400,6 +1597,13 @@ packages:
     dependencies:
       type: 2.7.2
     dev: true
+
+  /fraction.js@4.3.4:
+    resolution:
+      {
+        integrity: sha512-pwiTgt0Q7t+GHZA4yaLjObx4vXmmdcS0iSJ19o8d/goUGgItX9UZWKWNnLHehxviD8wU2IWRsnR8cD5+yOJP2Q==,
+      }
+    dev: false
 
   /fs.realpath@1.0.0:
     resolution:
@@ -1459,10 +1663,10 @@ packages:
       }
     dev: true
 
-  /hono@4.3.6:
+  /hono@4.3.7:
     resolution:
       {
-        integrity: sha512-2IqXwrxWF4tG2AR7b5tMYn+KEnWK8UvdC/NUSbOKWj/Kj11OJqel58FxyiXLK5CcKLiL8aGtTe4lkBKXyaHMBQ==,
+        integrity: sha512-GXlsGnCAwGosu+COwYyYC8MwOY2L6Ihg9V1znYdMD8DHCJl+13Nk4o8dsBYJpae4oujjw24jBaITuYWVq2+V8Q==,
       }
     engines: { node: '>=16.0.0' }
     dev: false
@@ -1490,6 +1694,13 @@ packages:
         integrity: sha512-+lP4/6lKUBfQjZ2pdxThZvLUAafmZb8OAxFb8XXtiQmS35INgr85hdOGoEs124ez1FCnZJt6jau/T+alh58QFQ==,
       }
     dev: true
+
+  /javascript-natural-sort@0.7.1:
+    resolution:
+      {
+        integrity: sha512-nO6jcEfZWQXDhOiBtG2KvKyEptz7RVbpGP4vTD2hLBdmNQSsCiicO2Ioinv6UI4y9ukqnBpy+XZ9H6uLNgJTlw==,
+      }
+    dev: false
 
   /json-diff@0.9.0:
     resolution:
@@ -1526,6 +1737,25 @@ packages:
       }
     dev: true
 
+  /mathjs@12.4.2:
+    resolution:
+      {
+        integrity: sha512-lW14EzwAFgbNN7AZikxplmhs7wiXDhMphBOGCA3KS6T29ECEkHJsBtbEW5cnCz7sXtl4nDyvTdR+DqVsZyiiEw==,
+      }
+    engines: { node: '>= 18' }
+    hasBin: true
+    dependencies:
+      '@babel/runtime': 7.24.5
+      complex.js: 2.1.1
+      decimal.js: 10.4.3
+      escape-latex: 1.2.0
+      fraction.js: 4.3.4
+      javascript-natural-sort: 0.7.1
+      seedrandom: 3.0.5
+      tiny-emitter: 2.1.0
+      typed-function: 4.1.1
+    dev: false
+
   /memoizee@0.4.15:
     resolution:
       {
@@ -1552,12 +1782,33 @@ packages:
       brace-expansion: 2.0.1
     dev: true
 
+  /modbus-serial@8.0.16:
+    resolution:
+      {
+        integrity: sha512-BB9RuTL1/pqDtY0XxXoaSAdoihPbYv4ASgi6LD0I5H1sBSn9D0+ZB1pCkGjLAhUnXeHSeD5V44D7UGH2lGkJxQ==,
+      }
+    dependencies:
+      debug: 4.3.4
+      serialport: 12.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /ms@2.1.2:
     resolution:
       {
         integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==,
       }
-    dev: true
+
+  /net-snmp@3.11.2:
+    resolution:
+      {
+        integrity: sha512-QKy2JQHIBsSK344dUxYRZv7tU0ANk8f8fzKD/Mmq/cCxm/cPbtiT7009QEgxdViW/gGjqGIOiLHxkCc+JhZltg==,
+      }
+    dependencies:
+      asn1-ber: 1.2.2
+      smart-buffer: 4.2.0
+    dev: false
 
   /next-tick@1.1.0:
     resolution:
@@ -1565,6 +1816,13 @@ packages:
         integrity: sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==,
       }
     dev: true
+
+  /node-addon-api@7.0.0:
+    resolution:
+      {
+        integrity: sha512-vgbBJTS4m5/KkE16t5Ly0WW9hz46swAstv0hYYwMtbG7AznRhNyfLRe8HZAiWIpcHzoO7HxhLuBQj9rJ/Ho0ZA==,
+      }
+    dev: false
 
   /node-cron@3.0.3:
     resolution:
@@ -1574,6 +1832,14 @@ packages:
     engines: { node: '>=6.0.0' }
     dependencies:
       uuid: 8.3.2
+    dev: false
+
+  /node-gyp-build@4.6.0:
+    resolution:
+      {
+        integrity: sha512-NTZVKn9IylLwUzaKjkas1e4u2DLNcV4rdYagA4PWdPwW87Bi7z+BznyKSRwS/761tV/lzCGXplWsiaMjLqP2zQ==,
+      }
+    hasBin: true
     dev: false
 
   /once@1.4.0:
@@ -1594,6 +1860,13 @@ packages:
     hasBin: true
     dev: true
 
+  /regenerator-runtime@0.14.1:
+    resolution:
+      {
+        integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==,
+      }
+    dev: false
+
   /resolve-pkg-maps@1.0.0:
     resolution:
       {
@@ -1601,12 +1874,52 @@ packages:
       }
     dev: true
 
+  /seedrandom@3.0.5:
+    resolution:
+      {
+        integrity: sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==,
+      }
+    dev: false
+
+  /serialport@12.0.0:
+    resolution:
+      {
+        integrity: sha512-AmH3D9hHPFmnF/oq/rvigfiAouAKyK/TjnrkwZRYSFZxNggJxwvbAbfYrLeuvq7ktUdhuHdVdSjj852Z55R+uA==,
+      }
+    engines: { node: '>=16.0.0' }
+    dependencies:
+      '@serialport/binding-mock': 10.2.2
+      '@serialport/bindings-cpp': 12.0.1
+      '@serialport/parser-byte-length': 12.0.0
+      '@serialport/parser-cctalk': 12.0.0
+      '@serialport/parser-delimiter': 12.0.0
+      '@serialport/parser-inter-byte-timeout': 12.0.0
+      '@serialport/parser-packet-length': 12.0.0
+      '@serialport/parser-readline': 12.0.0
+      '@serialport/parser-ready': 12.0.0
+      '@serialport/parser-regex': 12.0.0
+      '@serialport/parser-slip-encoder': 12.0.0
+      '@serialport/parser-spacepacket': 12.0.0
+      '@serialport/stream': 12.0.0
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /sisteransi@1.0.5:
     resolution:
       {
         integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==,
       }
     dev: true
+
+  /smart-buffer@4.2.0:
+    resolution:
+      {
+        integrity: sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==,
+      }
+    engines: { node: '>= 6.0.0', npm: '>= 3.0.0' }
+    dev: false
 
   /source-map-support@0.5.21:
     resolution:
@@ -1635,6 +1948,13 @@ packages:
       es5-ext: 0.10.64
       next-tick: 1.1.0
     dev: true
+
+  /tiny-emitter@2.1.0:
+    resolution:
+      {
+        integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==,
+      }
+    dev: false
 
   /ts-node@10.9.2(@types/node@20.12.12)(typescript@4.9.5):
     resolution:
@@ -1690,6 +2010,14 @@ packages:
         integrity: sha512-dzlvlNlt6AXU7EBSfpAscydQ7gXB+pPGsPnfJnZpiNJBDj7IaJzQlBZYGdEi4R9HmPdBv2XmWJ6YUtoTa7lmCw==,
       }
     dev: true
+
+  /typed-function@4.1.1:
+    resolution:
+      {
+        integrity: sha512-Pq1DVubcvibmm8bYcMowjVnnMwPVMeh0DIdA8ad8NZY2sJgapANJmiigSUwlt+EgXxpfIv8MWrQXTIzkfYZLYQ==,
+      }
+    engines: { node: '>= 14' }
+    dev: false
 
   /typescript@4.9.5:
     resolution:

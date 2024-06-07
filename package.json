@@ -8,14 +8,15 @@
   "dependencies": {
     "@hono/node-server": "^1.11.1",
     "@types/node-cron": "^3.0.11",
-    "dotenv": "^16.4.5",
     "drizzle-orm": "^0.30.10",
     "hono": "^4.3.7",
     "mathjs": "^12.4.2",
     "modbus-serial": "^8.0.16",
-    "mqtt": "^5.7.0",
     "net-snmp": "^3.11.2",
-    "node-cron": "^3.0.3"
+    "node-cron": "^3.0.3",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7",
+    "tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
     "@types/node": "^20.12.12",
