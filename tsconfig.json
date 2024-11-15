@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
+    "target": "es6",
+    "module": "commonjs",
     "moduleResolution": "node", // 更改为 'node'
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "types": ["node"],
     "baseUrl": ".", // 使 TypeScript 正确识别 baseUrl 下的路径
     "paths": {
       "@/*": ["./src/*"]
-    },
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
+    }
   },
   "exclude": ["migrations/*", "src/generate/*", "tests/", "node_modules"]
 }

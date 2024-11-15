@@ -15,7 +15,7 @@ const getErrorMessage = (code: string) => {
 };
 
 export default {
-  sucess: async (ctx: Context, json: any = null) => {
+  success: async (ctx: Context, json: any = null) => {
     return ctx.json({ data: json, code: '0000', message: 'sucess' });
   },
   failed: async (ctx: Context, message: any = '') => {

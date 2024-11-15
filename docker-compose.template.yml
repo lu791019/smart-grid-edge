@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  aisails-backend:
+    image: repo.devpack.cc/smart-grid/smart-grid-edge:${IMAGE_TAG}
+    ports:
+      - 6000:3000
+    volumes:
+      - ./public:/app/public # 增加挂载卷
+      - /etc/localtime:/etc/localtime:ro
+    networks:
+      - docker_server_netsserver
+    privileged: true # 可能需要根据您的需求调整，如果要完全使用DinD，需要开启
+    environment:
+      TZ: Asia/Taipei
+      MQTT_HOST: mqtt.energypowerdemo.com
+      MQTT_PORT: 8883
+      MQTT_USERNAME: user
+      MQTT_PASSWORD: 123
+      MQTT_CLIENT_ID: energypower
+      NODE_ENV: prd
+networks:
+  docker_server_netsserver:
+    external: true

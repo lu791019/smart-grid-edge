@@ -1,21 +1,33 @@
 {
-  "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsc",
-    "format": "prettier --write ."
+    "build": "tsc && tsc-alias",
+    "format": "prettier --write .",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@hono/node-server": "^1.11.1",
     "@types/node-cron": "^3.0.11",
+    "@types/pouchdb": "^6.4.2",
+    "@types/pouchdb-upsert": "^2.2.9",
+    "bullmq": "^5.13.2",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.30.10",
     "hono": "^4.3.7",
+    "ioredis": "^5.4.1",
     "mathjs": "^12.4.2",
     "modbus-serial": "^8.0.16",
     "mqtt": "^5.7.0",
     "net-snmp": "^3.11.2",
-    "node-cron": "^3.0.3"
+    "node-cron": "^3.0.3",
+    "pouchdb": "^8.0.1",
+    "pouchdb-adapter-http": "^8.0.1",
+    "pouchdb-find": "^8.0.1",
+    "pouchdb-upsert": "^2.2.0",
+    "tsc-alias": "^1.8.10",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
     "@types/node": "^20.12.12",
